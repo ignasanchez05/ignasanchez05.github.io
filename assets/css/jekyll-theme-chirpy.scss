@@ -5,16 +5,17 @@
 
 /* ── Variables ── */
 :root {
-  --accent: #00b4d8;
-  --accent-soft: rgba(0, 180, 216, 0.08);
-  --card-bg: #1e2433;
-  --sidebar-bg: #151a27;
+  --accent: #ff6b2b;
+  --accent-glow: rgba(255, 107, 43, 0.15);
+  --accent-border: rgba(255, 107, 43, 0.25);
+  --card-bg: #111111;
+  --sidebar-bg: #0d0d0d;
 }
 
 /* ── Sidebar ── */
 #sidebar {
   background: var(--sidebar-bg) !important;
-  border-right: 1px solid rgba(0, 180, 216, 0.15) !important;
+  border-right: 1px solid var(--accent-border) !important;
 }
 
 #sidebar .nav-link.active {
@@ -28,20 +29,31 @@
 
 #sidebar img.avatar {
   border: 2px solid var(--accent) !important;
-  box-shadow: 0 0 12px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 0 16px rgba(255, 107, 43, 0.4);
 }
 
-/* ── Tarjetas de proyectos ── */
+#sidebar .site-title a {
+  color: #ffffff !important;
+}
+
+/* ── Tarjetas ── */
 .card, .post-preview {
   background: var(--card-bg) !important;
-  border: 1px solid rgba(0, 180, 216, 0.12) !important;
+  border: 1px solid var(--accent-border) !important;
   border-radius: 10px !important;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .card:hover, .post-preview:hover {
-  border-color: rgba(0, 180, 216, 0.4) !important;
-  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 4px 24px var(--accent-glow) !important;
+}
+
+/* ── Títulos de posts ── */
+.post-preview h1,
+.post-preview h2,
+h1.post-title {
+  color: #ffffff !important;
 }
 
 /* ── Links ── */
@@ -53,25 +65,36 @@ footer a {
 
 /* ── Tags ── */
 .tag-btn {
-  border-color: rgba(0, 180, 216, 0.4) !important;
+  border-color: var(--accent-border) !important;
   color: var(--accent) !important;
-  background: var(--accent-soft) !important;
+  background: var(--accent-glow) !important;
   border-radius: 6px !important;
 }
 
 .tag-btn:hover {
-  background: rgba(0, 180, 216, 0.2) !important;
+  background: rgba(255, 107, 43, 0.25) !important;
+  border-color: var(--accent) !important;
+}
+
+/* ── Panel derecho ── */
+.panel-wrapper {
+  background: var(--card-bg) !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--accent-border) !important;
+  padding: 12px !important;
 }
 
 /* ── Separadores ── */
 hr {
-  border-color: rgba(0, 180, 216, 0.15) !important;
+  border-color: var(--accent-border) !important;
 }
 
-/* ── Panel derecho (Recently Updated) ── */
-.panel-wrapper {
-  background: var(--card-bg) !important;
-  border-radius: 10px !important;
-  padding: 12px !important;
-  border: 1px solid rgba(0, 180, 216, 0.12) !important;
+/* ── Scrollbar ── */
+::-webkit-scrollbar-thumb {
+  background: var(--accent) !important;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d !important;
 }
