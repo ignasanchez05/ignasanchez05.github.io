@@ -22,5 +22,8 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
     "rollup": "^4.61.1"
+  },
+  "dependencies": {
+    "jekyll-theme-chirpy": "^5.3.21"
   }
 }
