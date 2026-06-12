@@ -3,57 +3,75 @@
 
 @use 'main{% if jekyll.environment == "production" %}.bundle{% endif %}';
 
-/* ── Accent color ── */
+/* ── Variables ── */
 :root {
   --accent: #00b4d8;
+  --accent-soft: rgba(0, 180, 216, 0.08);
+  --card-bg: #1e2433;
+  --sidebar-bg: #151a27;
 }
 
-/* Links solo en el contenido principal, no en sidebar */
-.content a,
-.post-preview a,
-.panel-wrapper a {
-  color: var(--accent) !important;
+/* ── Sidebar ── */
+#sidebar {
+  background: var(--sidebar-bg) !important;
+  border-right: 1px solid rgba(0, 180, 216, 0.15) !important;
 }
 
-/* Tags con borde de color */
-.tag-btn {
-  border-color: var(--accent) !important;
-  color: var(--accent) !important;
-}
-
-/* Item activo del sidebar */
 #sidebar .nav-link.active {
   color: var(--accent) !important;
 }
+
 #sidebar .nav-link.active svg {
   fill: var(--accent) !important;
   color: var(--accent) !important;
 }
 
-/* Títulos de los posts con color */
-.post-preview h1,
-.post-preview h2,
-.post-title {
-  color: #ffffff !important;
-}
-
-/* Línea separadora con color */
-hr {
-  border-color: var(--accent) !important;
-  opacity: 0.3;
-}
-
-/* Avatar con borde de color */
 #sidebar img.avatar {
   border: 2px solid var(--accent) !important;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.3);
 }
 
-/* Sidebar name con color */
-#sidebar .site-title a {
-  color: #ffffff !important;
+/* ── Tarjetas de proyectos ── */
+.card, .post-preview {
+  background: var(--card-bg) !important;
+  border: 1px solid rgba(0, 180, 216, 0.12) !important;
+  border-radius: 10px !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Footer links */
+.card:hover, .post-preview:hover {
+  border-color: rgba(0, 180, 216, 0.4) !important;
+  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1) !important;
+}
+
+/* ── Links ── */
+.content a,
+.panel-wrapper a,
 footer a {
   color: var(--accent) !important;
+}
+
+/* ── Tags ── */
+.tag-btn {
+  border-color: rgba(0, 180, 216, 0.4) !important;
+  color: var(--accent) !important;
+  background: var(--accent-soft) !important;
+  border-radius: 6px !important;
+}
+
+.tag-btn:hover {
+  background: rgba(0, 180, 216, 0.2) !important;
+}
+
+/* ── Separadores ── */
+hr {
+  border-color: rgba(0, 180, 216, 0.15) !important;
+}
+
+/* ── Panel derecho (Recently Updated) ── */
+.panel-wrapper {
+  background: var(--card-bg) !important;
+  border-radius: 10px !important;
+  padding: 12px !important;
+  border: 1px solid rgba(0, 180, 216, 0.12) !important;
 }
