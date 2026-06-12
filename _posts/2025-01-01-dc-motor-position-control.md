@@ -1,8 +1,8 @@
 ---
-title: "DC Motor Position Control — State-Space Design"
+title: "Control de Posicion de Motor de Corriente Continua- Control PID"
 date: 2025-01-01 00:00:00 -0300
 categories: [Control Systems, Embedded]
-tags: [matlab, state-space, pid, stm32, motor-control]
+tags: [matlab, state-space, pid, motor-control]
 ---
 
 ## Overview
