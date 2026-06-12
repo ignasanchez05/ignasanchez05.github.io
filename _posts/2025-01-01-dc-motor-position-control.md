@@ -3,6 +3,9 @@ title: "Control de Posicion de Motor de Corriente Continua- Control PID"
 date: 2025-01-01 00:00:00 -0300
 categories: [Control Systems, Embedded]
 tags: [matlab, state-space, pid, motor-control]
+image:
+  path: /assets/img/posts/DC-Motor/Respuesta_Mixta _1.png  # Acá va la ruta a una imagen linda de tu proyecto
+  alt: Gráfico de respuesta del sistema
 ---
 
 ## Overview
