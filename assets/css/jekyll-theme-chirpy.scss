@@ -1,0 +1,18 @@
+---
+---
+
+@use 'main{% if jekyll.environment == "production" %}.bundle{% endif %}';
+
+/* Custom colors */
+:root {
+  --link-color: #00b4d8;
+}
+
+[data-mode="dark"] {
+  --link-color: #00b4d8;
+  --sidebar-active-color: #00b4d8;
+}
+
+a {
+  color: var(--link-color) !important;
+}
