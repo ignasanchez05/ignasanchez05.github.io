@@ -1,0 +1,14 @@
+---
+---
+
+@import "main";
+
+:root {
+  --color-accent: #00b4d8;
+}
+
+[data-mode="dark"] {
+  --link-color: #00b4d8;
+  --link-underline-color: rgba(0, 180, 216, 0.3);
+  --sidebar-active-color: #00b4d8;
+}
