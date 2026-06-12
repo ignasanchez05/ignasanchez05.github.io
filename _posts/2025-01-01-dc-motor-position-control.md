@@ -5,7 +5,7 @@ categories: [Control Systems, Embedded]
 tags: [matlab, state-space, pid, motor-control]
 image:
   path: /assets/img/posts/DC-Motor/Respuesta_Mixta _1.png  # Acá va la ruta a una imagen linda de tu proyecto
-  alt: Gráfico de respuesta del sistema
+  alt: Grafico de respuesta del sistema
 ---
 
 ## Overview
